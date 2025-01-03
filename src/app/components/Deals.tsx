@@ -107,8 +107,8 @@ function Deals() {
 
       <div  className="flex flex-col md:flex md:flex-row md:space-x-3">
         {posts?.map((item:any, index:number) => (
-          <Link href={`/product/${item?._id}`}>
-            <div  key={item.id || index} className="p-2 bg-white cursor-pointer shadow-md flex flex-col space-y-2 items-center justify-center">
+          <Link  key={item.id || index} href={`/product/${item?._id}`}>
+            <div  className="p-2 bg-white cursor-pointer shadow-md flex flex-col space-y-2 items-center justify-center">
               <Image alt="img" className="w-32 h-32 object-contain" src={item?.image} />
 
               <div>
