@@ -57,8 +57,8 @@ function Cart() {
       <div className="relative grid grid-cols-8 h-screen bg-gray-200">
         <div className="flex flex-col col-span-5 mt-16 ml-20">
           <h2 className="text-xl font-bold">Your shopping Cart</h2>
-          {cart?.map((item:any ) => (
-            <div className="border rounded-md p-3 bg-white shadow-md flex flex-row space-x-4 my-4">
+          {cart?.map((item:any, index:any ) => (
+            <div key={item.id || index} className="border rounded-md p-3 bg-white shadow-md flex flex-row space-x-4 my-4">
               <Image
                 width={80}
                 height={80}
