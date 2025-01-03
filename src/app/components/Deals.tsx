@@ -1,8 +1,10 @@
+/* eslint-disable react/no-unescaped-entities */
 "use client";
  import { groq } from "next-sanity";
 import Link from "next/link";
 import React ,{useState,useEffect} from "react";
 import { client } from "@/sanity/lib/client";
+import Image from "next/image";
 
 async function getData() {
   return client.fetch(groq`*[_type == "deal"]`);
@@ -107,7 +109,7 @@ function Deals() {
         {posts?.map((item:any, index:number) => (
           <Link href={`/product/${item?._id}`}>
             <div className="p-2 bg-white cursor-pointer shadow-md flex flex-col space-y-2 items-center justify-center">
-              <img className="w-32 h-32 object-contain" src={item?.image} />
+              <Image alt="img" className="w-32 h-32 object-contain" src={item?.image} />
 
               <div>
                 <p>

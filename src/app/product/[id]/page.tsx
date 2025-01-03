@@ -5,6 +5,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { client } from "@/sanity/lib/client";
 import { addToCart } from "../../../../redux/CartReducer";
+import Image from "next/image";
 
 interface Offer {
   id: string;
@@ -93,7 +94,7 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ params }) => {
         {/* Left part */}
         <div>
           <div>
-            <img
+            <Image 
               className="w-80 h-80 rounded-sm object-contain cursor-pointer"
               src={product?.carouselImages[index] || ""}
               alt="Product"
@@ -101,7 +102,7 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ params }) => {
           </div>
           <div className="hidden lg:flex lg:mt-12 gap-10 mt-10">
             {product?.carouselImages?.map((item, idx) => (
-              <img
+              <Image 
                 key={idx}
                 className="w-20 h-20 object-contain cursor-pointer"
                 src={item}
