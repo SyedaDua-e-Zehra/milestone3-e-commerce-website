@@ -109,7 +109,7 @@ function Deals() {
         {posts?.map((item:any, index:number) => (
           <Link  key={item.id || index} href={`/product/${item?._id}`}>
             <div  className="p-2 bg-white cursor-pointer shadow-md flex flex-col space-y-2 items-center justify-center">
-              <Image alt="img" className="w-32 h-32 object-contain" src={item?.image} />
+              <Image alt="img"width={100} height={100} className="w-32 h-32 object-contain" src={item?.image} />
 
               <div>
                 <p>

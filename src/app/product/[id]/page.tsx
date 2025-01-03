@@ -98,6 +98,8 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ params }) => {
               className="w-80 h-80 rounded-sm object-contain cursor-pointer"
               src={product?.carouselImages[index] || ""}
               alt="Product"
+              width={80}
+              height={80}
             />
           </div>
           <div className="hidden lg:flex lg:mt-12 gap-10 mt-10">
@@ -108,6 +110,8 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ params }) => {
                 src={item}
                 alt={`Carousel ${idx}`}
                 onMouseEnter={() => setIndex(idx)}
+                width={20}
+                height={20}
               />
             ))}
           </div>
